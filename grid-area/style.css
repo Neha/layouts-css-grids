@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: arial;
+}
+
+.background-grey {
+    background: #eee;
+    width: 800px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-areas:
+        "header nav nav"
+        "large rightcol rightcol"
+        "footer footer footer";
+    padding: 10px;
+    gap: 10px;
+}
+footer {
+    grid-area: footer;
+}
+
+.large {
+    grid-area: large;
+    background: pink;
+    padding: 10px;
+    display: grid;
+}
+
+.right-col {
+    grid-area: rightcol;
+}
+
+.midcontent {
+    background: #eee;
+    padding: 10px;
+    gap: 10px;
+}
+
+.content {
+    align-self: center;
+}
+
+.content > h3 {
+    font-size: 1.5rem;
+}
+
+.content > a {
+    border: 2px solid #8e8e8e;
+    padding: 8px;
+    text-align: center;
+    color: #505050;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+header {
+    background: #cecece;
+    padding: 10px;
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+    background: #cecece;
+    padding: 10px;
+    text-align: right;
+}
+
+.right-col {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "one two"
+        "three four";
+    text-align: center;
+    line-height: 150px;
+}
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+.right-col > div {
+    background-color: #f4fff4;
+}
+
+footer {
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    font-size: 10px;
+}
+nav a {
+    color: #000;
+    font-size: 12px;
+    margin: 10px;
+    letter-spacing: 2px;
+}
